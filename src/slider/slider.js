@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 (function() {
   'use strict';
 
@@ -81,16 +80,6 @@
    */
   MaterialSlider.prototype.onChange_ = function(event) {
     this.updateValueStyles_();
-  };
-
-  /**
-   * Handle mouseup on element.
-   *
-   * @param {Event} event The event that fired.
-   * @private
-   */
-  MaterialSlider.prototype.onMouseUp_ = function(event) {
-    event.target.blur();
   };
 
   /**
@@ -221,11 +210,9 @@
 
       this.boundInputHandler = this.onInput_.bind(this);
       this.boundChangeHandler = this.onChange_.bind(this);
-      this.boundMouseUpHandler = this.onMouseUp_.bind(this);
       this.boundContainerMouseDownHandler = this.onContainerMouseDown_.bind(this);
       this.element_.addEventListener('input', this.boundInputHandler);
       this.element_.addEventListener('change', this.boundChangeHandler);
-      this.element_.addEventListener('mouseup', this.boundMouseUpHandler);
       this.element_.parentElement.addEventListener('mousedown', this.boundContainerMouseDownHandler);
 
       this.updateValueStyles_();

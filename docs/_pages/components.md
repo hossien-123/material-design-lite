@@ -98,7 +98,7 @@ categories:
               file: image.html
             - caption: Event
               file: event.html
-  - name: chip
+  - name: chips
     title: Chips
     description: Represents complex entities in small blocks.
     components:
@@ -127,6 +127,17 @@ categories:
           limited cross-browser support. To ensure support across all modern
           browsers, please consider using a polyfill or creating your own.
           There is no polyfill included with MDL.
+  - name: expansion
+    title: Expansion
+    description: Collapsible content sections.
+    components:
+      - name: expansion
+        class: mdl-expansion
+        snippets:
+          - snippet_group:
+            - caption: Example Expansion
+              file: expansion.html
+              full_width: true
   - name: layout
     title: Layout
     description: Building blocks for constructing a page layout.

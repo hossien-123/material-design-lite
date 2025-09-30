@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 (function() {
   'use strict';
 
@@ -82,7 +81,9 @@
       var button = radios[i].querySelector('.' + this.CssClasses_.RADIO_BTN);
       // Different name == different group, so no point updating those.
       if (button.getAttribute('name') === this.btnElement_.getAttribute('name')) {
-        radios[i]['MaterialRadio'].updateClasses_();
+        if (typeof radios[i]['MaterialRadio'] !== 'undefined') {
+          radios[i]['MaterialRadio'].updateClasses_();
+        }
       }
     }
   };
